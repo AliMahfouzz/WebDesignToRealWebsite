@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicken Sandwich</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2/css/bootstrap.min.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+      }
+
+      @font-face {
+        font-family: "BakbakOne";
+        src: url("BakbakOne-Regular.ttf");
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Poppins-Black.ttf");
+      }
+
+      ul {
+        display: flex;
+      }
+
+      .header .ul {
+        justify-content: space-between;
+        margin-left: 3%;
+        margin-right: 5%;
+      }
+
+      .header .ulll {
+        margin-left: 1%;
+        margin-right: 1%;
+      }
+
+      .header .ulll li:first-child {
+        margin-right: 20px;
+      }
+
+      .header .ulll li a {
+        line-height: 2.5;
+      }
+
+      .header .ulll li {
+        margin-left: 10px;
+      }
+
+      ul li {
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        margin-top: 32.5px;
+        height: 45px;
+      }
+
+      ul li span,
+      ul li a span {
+        font-family: "BakbakOne";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 38px;
+        letter-spacing: 0.005em;
+      }
+
+      .burger {
+        height: 45px;
+        width: 53px;
+        border-radius: 0px;
+      }
+
+      .buttn {
+        background: #eda539;
+        width: 182px;
+        border-radius: 50px;
+        padding: 2px 20px 10px 20px;
+      }
+
+      @font-face {
+        font-family: "MsMadi";
+        src: url("./MsMadi-Regular.ttf");
+      }
+
+      .red-text {
+        color: red;
+        font-family: "MsMadi";
+      }
+
+      .white_to_red {
+        background: linear-gradient(
+          180deg,
+          #ed1b27 0%,
+          rgba(237, 27, 39, 0) 61.86%
+        );
+      }
+
+      .first-div,
+      .second-div {
+        height: 100vh;
+      }
+
+      .first-div {
+        width: 65%;
+      }
+
+      .second-div {
+        width: 35%;
+      }
+
+      .sandwich-image {
+        width: 650px;
+        height: 300px;
+        margin-left: -45%;
+        margin-top: 1%;
+      }
+
+      .text-big {
+        font-family: "Bakbak One";
+        font-weight: 400;
+        font-size: 75px;
+        display: flex;
+      }
+
+      .text-big-1 {
+        -webkit-text-fill-color: #fff;
+        -webkit-text-stroke: 1px #ed1b27;
+      }
+
+      .text-big-2 {
+        -webkit-text-fill-color: #ed1b27;
+        -webkit-text-stroke: 1px #fff;
+        font-style: bold;
+      }
+
+      .text {
+        margin-left: 5%;
+        margin-right: 25%;
+      }
+
+      .text span {
+        margin-top: 2px;
+      }
+
+      .text .t {
+        font-family: "Bakbak One";
+        font-size: 34px;
+        font-style: bold;
+        font-weight: 600;
+        line-height: 90px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      .t-1 {
+        color: #221516;
+      }
+
+      .t-2 {
+        color: #ed1b27;
+      }
+
+      .circle {
+        display: flex;
+        width: 85px;
+        height: 100px;
+        margin-top: 50px;
+        background-color: #ffdadc;
+        border-radius: 60% 60% 60% 60% / 60% 60% 60% 60%;
+        position: relative;
+      }
+
+      .last-circle {
+        background-color: #eda539 !important;
+      }
+
+      .circle2 {
+        position: absolute;
+        width: 65px;
+        height: 50%;
+        border-radius: 50%;
+        margin-top: 5%;
+        margin-left: 10%;
+        background-color: white;
+        justify-content: center;
+        display: flex;
+      }
+
+      .m-img {
+        margin-top: 90px;
+      }
+
+      .circle2 img {
+        display: flex;
+        width: 100%;
+        padding: 5px;
+      }
+
+      .circle2::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+
+      .circl2-d {
+        position: absolute;
+        margin-top: 53%;
+        /* margin-left: 10%; */
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+      }
+
+      .circl2-d .ttttt {
+        color: #ed1b27;
+      }
+
+      .cc {
+        display: flex;
+        justify-content: center;
+        width: 52.42px;
+        height: 52.42px;
+        border-radius: 50%;
+        background-color: #ed1b27;
+      }
+
+      .cc img {
+        padding: 15px;
+      }
+
+      .mybtn {
+        align-items: center;
+        padding: 5px 10px;
+        gap: 25px;
+        width: 200px;
+        height: 62.42px;
+        background: #221516;
+        border-radius: 24px;
+        margin-left: 5%;
+        color: white;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 39px;
+      }
+
+      .bt-11 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 19px;
+        gap: 15px;
+
+        width: 156.31px;
+        height: 41px;
+
+        background: #ffdadc;
+        border-radius: 16px;
+        color: black;
+      }
+
+      .bt-12 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 19px;
+        gap: 15px;
+
+        width: 104.18px;
+        height: 41px;
+
+        background: #ffeed3;
+        border-radius: 16px;
+        color: black;
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+      .btt{
+        display: flex;
+        margin-left: -20%;
+      }
+
+      .btt a{
+        margin-top: 70px;
+        margin-left: 10px;
+      }
+
+      .btt a span{
+        font-weight: 500;
+    font-family: 'BakbakOne';
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex">
+      <div class="first-div">
+        <section class="header w-100">
+          <ul class="ul">
+            <li><span>Menu</span></li>
+            <li><span>About US</span></li>
+            <li>
+              <a>
+                <img src="images/Vector.png" class="burger" />
+                <span style="font-size: 25px">Fast</span>
+                <span class="red-text">food</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <div class="d-flex flex-column text">
+          <span class="text-big text-big-1"> CHICKEN </span>
+          <span class="text-big text-big-2"> SANDWICH </span>
+        </div>
+        <p class="text" style="width: 45%">
+          Lorem ipsum dolor sit amet consectetur curobitur acuumsan auctor
+          pulvinar proin sit amet
+        </p>
+        <p class="text" style="width: 45%">
+          <span class="t t-1">TOTAL : </span>
+          <span class="t t-2">$24.30</span>
+        </p>
+        <a class="btn d-flex mybtn">
+          <div class="cc">
+            <img src="images/Vector (9).png" />
+          </div>
+          <span>Buy now</span>
+        </a>
+      </div>
+
+      <div class="second-div">
+        <div class="white_to_red h-75 w-100">
+          <section class="header">
+            <ul class="ulll">
+              <li>
+                <a class="btn buttn">
+                  <img src="images/Vector (4).png" />
+                  <span>Order Now</span>
+                </a>
+              </li>
+              <li>
+                <a><img src="images/Vector (5).png" /></a>
+              </li>
+              <li>
+                <a><img src="images/Vector (6).png" /></a>
+              </li>
+            </ul>
+          </section>
+          <div class="btt">
+            <a class="bt-11">
+              <img src="images/Vector (2).png" />
+              <span>10-18 Mins</span>
+            </a>
+            <a class="bt-12">
+              <img src="images/Vector (3).png" />
+              <span>4.9</span>
+            </a>
+          </div>
+          <img src="images/sandwich.png" class="sandwich-image" />
+        </div>
+        <div class="h-25 w-100" style="margin-left: -30%">
+          <div
+            class="d-flex justify-content-between"
+            style="margin-left: 20px; margin-right: 30px"
+          >
+            <div>
+              <img src="images/Vector (7).png" class="m-img" />
+            </div>
+            <div class="circle flex-column">
+              <div class="circle2">
+                <img src="images/6023618 1.png" />
+              </div>
+              <div class="circl2-d">
+                <span>Pizza</span>
+                <span class="ttttt">$12.80</span>
+              </div>
+            </div>
+
+            <div class="circle">
+              <div class="circle2">
+                <img src="images/1 1.png" />
+              </div>
+              <div class="circl2-d">
+                <span>Burger</span>
+                <span class="ttttt">$10.25</span>
+              </div>
+            </div>
+
+            <div class="circle last-circle">
+              <div class="circle2">
+                <img src="images/33 1.png" />
+              </div>
+              <div class="circl2-d">
+                <span>Sandwich</span>
+                <span class="ttttt">$12.15</span>
+              </div>
+            </div>
+            <div>
+              <img src="images/Vector (8).png" class="m-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="bootstrap-5.0.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
